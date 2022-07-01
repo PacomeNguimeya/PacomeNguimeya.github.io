@@ -12,17 +12,17 @@ social:
       header: false
     link: https://www.linkedin.com/in/everlyn-asiko/
     icon_pack: fas
-    icon: <i class="fa-brands fa-linkedin"></i>
+    icon: fa-linkedin
   - display:
       header: false
     link: https://twitter.com/everlyn_asiko
     icon_pack: fas
-    icon: <i class="fa-brands fa-twitter"></i>
+    icon: fa-twitter
   - display:
       header: false
     link: https://github.com/EverlynAsiko
     icon_pack: fas
-    icon: <i class="fa-brands fa-github"></i>
+    icon: fa-github
 organizations:
   - name: University of Cape Town
   - name: Quantum Leap Africa
