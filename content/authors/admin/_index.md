@@ -4,25 +4,25 @@ avatar_filename: everlyn_asiko_photo.resized.jpg
 bio: My research interests include machine translation, language modeling and
   speech recognition for low-resource languages..
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Machine translation
+  - Language modeling
+  - Speech recognition
 social:
   - display:
       header: false
     link: https://www.linkedin.com/in/everlyn-asiko/
     icon_pack: fas
-    icon: fa-linkedin
+    icon: fab
   - display:
       header: false
     link: https://twitter.com/everlyn_asiko
     icon_pack: fas
-    icon: fa-twitter
+    icon: fab
   - display:
       header: false
     link: https://github.com/EverlynAsiko
     icon_pack: fas
-    icon: fa-github
+    icon: fab
 organizations:
   - name: University of Cape Town
   - name: Quantum Leap Africa
