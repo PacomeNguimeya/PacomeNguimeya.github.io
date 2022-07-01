@@ -12,28 +12,28 @@ social:
       header: false
     link: https://www.linkedin.com/in/everlyn-asiko/
     icon_pack: fas
-    icon: linkedin
+    icon: <i class="fa-brands fa-linkedin"></i>
   - display:
       header: false
     link: https://twitter.com/everlyn_asiko
     icon_pack: fas
-    icon: twitter
+    icon: <i class="fa-brands fa-twitter"></i>
   - display:
       header: false
     link: https://github.com/EverlynAsiko
     icon_pack: fas
-    icon: github
+    icon: <i class="fa-brands fa-github"></i>
 organizations:
   - name: University of Cape Town
   - name: Quantum Leap Africa
     url: https://quantumleapafrica.org/
 education:
   courses:
+    - course: MSc of Mathematical Sciences
+      institution: African Institute of Mathematical Sciences
     - course: BSc in Computer Science
       institution: Masinde Muliro University of Science and Technology
       year: ""
-    - course: MSc of Mathematical Sciences
-      institution: African Institute of Mathematical Sciences
 superuser: true
 highlight_name: true
 title: Everlyn Asiko
