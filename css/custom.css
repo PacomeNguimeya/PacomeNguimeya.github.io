@@ -106,3 +106,9 @@ body {
 .bg-success {
 	background-color: #dff0d8;
 }
+
+
+img {
+	border-radius: 50%;
+  }
+
