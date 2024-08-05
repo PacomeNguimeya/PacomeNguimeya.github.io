@@ -112,3 +112,8 @@ img {
 	border-radius: 50%;
   }
 
+  a{
+	color: black;
+	text-decoration: none;
+  }
+
