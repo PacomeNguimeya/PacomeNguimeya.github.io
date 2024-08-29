@@ -1,0 +1,303 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[top=2cm,left=1cm,right=2cm,bottom=2cm]{geometry}
+
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{calc}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{setspace}
+
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6} % dark blue
+\definecolor{brightcerulean}{rgb}{0.11, 0.67, 0.84}
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{linecolor}{gray}{0.5} % You can adjust the gray value from 0 (black) to 1 (white)
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,    % Colorie les liens 
+	breaklinks=true,    % Retour a la ligne dans les liens trop longs 
+	urlcolor=bondiblue,    	% Couleur des hyperliens (liens externes) 
+	unicode,
+	pdftitle={Pacome Nguimeya CV},
+	pdfauthor={Pacome Nguimeya}
+}
+
+% For dings symbols
+\usepackage{pifont}
+\newcommand{\bakfinger}{\item[\color{Brown}\ding{42}]}
+\newcommand{\balfinger}{\item[\color{black}\ding{42}]}
+\newcommand{\bbkfinger}{\item[\color{Brown}\ding{43}]}
+\newcommand{\bblfinger}{\item[\color{black}\ding{43}]}
+\newcommand{\bckfinger}{\item[\color{Brown}\ding{45}]}
+\newcommand{\bclfinger}{\item[\color{black}\ding{45}]}
+\newcommand{\bakarrow}{\item[\color{Brown}\ding{226}]}
+\newcommand{\balarrow}{\item[\color{black}\ding{226}]}
+\newcommand{\bbkarrow}{\item[\color{Brown}\ding{227}]}
+\newcommand{\bblarrow}{\item[\color{black}\ding{227}]}
+\newcommand{\bckarrow}{\item[\color{Brown}\ding{228}]}
+\newcommand{\bclarrow}{\item[\color{black}\ding{228}]}
+\newcommand{\bdkarrow}{\item[\color{Brown}\ding{229}]}
+\newcommand{\bdlarrow}{\item[\color{black}\ding{229}]}
+\newcommand{\bekarrow}{\item[\color{Brown}\ding{254}]}
+\newcommand{\belarrow}{\item[\color{black}\ding{254}]}
+\newcommand{\baksquare}{\item[\color{Brown}\ding{110}]}
+\newcommand{\balsquare}{\item[\color{black}\ding{110}]}
+\newcommand{\bbksquare}{\item[\color{Brown}\ding{112}]}
+\newcommand{\bblsquare}{\item[\color{black}\ding{112}]}
+
+% For customizable underlining
+\usepackage{soul} 
+\setul{0.1ex}{0.01cm} % Adjust length and thickness as desired
+%><%
+
+% new command that creates an horizontal line with adjusted size
+\newcommand{\customhrulefill}[3][black]{%
+	\par\noindent
+	\hspace*{0.2in}
+	\begin{tikzpicture}
+		\fill[color=#1, rounded corners=#2/2] (0,-#2/2) rectangle (#3,#2/2);
+	\end{tikzpicture}
+}
+
+% new command that adjusts the font size based on a cm value
+\newcommand{\customfontsize}[1]{\fontsize{#1*28.45276}{#1*28.45276*1.2}\selectfont}
+
+% top align texts in table
+\newcommand{\topaligned}[1]{\begin{tabular}[t]{@{}l@{}}#1\end{tabular}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Clear the default header and footer
+\fancyhead{}
+\fancyfoot{}
+
+% Measure the width of the page number
+\newlength{\pagenumwidth}
+\settowidth{\pagenumwidth}{\thepage}
+
+% Define the size-adjustable brackets
+\newlength{\leftbrackwidth}
+\newlength{\rightbrackwidth}
+\newcommand{\leftbrack}{\makebox[\leftbrackwidth]{\textbf{\color{linecolor}(}}}
+\newcommand{\rightbrack}{\makebox[\rightbrackwidth]{\textbf{\color{linecolor})}}}
+
+% Default bracket widths
+\setlength{\leftbrackwidth}{1em}
+\setlength{\rightbrackwidth}{1em}
+
+% Calculate the length of the lines
+\newlength{\linefillwidth}
+\setlength{\linefillwidth}{0.5\textwidth-0.5\pagenumwidth-0.5\leftbrackwidth-0.5\rightbrackwidth}
+
+% Redefine the footpage to resemble the desired style
+\fancyfoot[C]{
+	\hspace*{0.2in}
+	\tikz[baseline=-0.5ex] \draw[linecolor, line width=1.00pt, rounded corners=1ex] (0,0) -- (\linefillwidth,0);%
+	\leftbrack\thepage\rightbrack%
+	\tikz[baseline=-0.5ex] \draw[linecolor, line width=1.00pt, rounded corners=1ex] (0,0) -- (\linefillwidth,0);%
+}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{fontawesome}
+\usepackage{bbding}
+
+% Define a new command for the custom line
+\newcommand{\customheader}[2]{
+	\noindent
+	\hspace{0.6cm}
+	\textcolor{darkblue}{\rule[0.5ex]{3.35cm}{0.15cm}} % Short thick blue line
+	\hspace{0.05cm} % Space between the line and the text
+	\textcolor{darkblue}{\textbf{\large #2}} % Section title
+}
+
+\begin{document}
+
+\begin{minipage}[t]{0.48\textwidth}
+	\vspace{-0.5cm}
+	{\bfseries\color{darkblue}\Large  Gaël-Pacôme Nguimeya Tematio}\\[0.5cm] % Name
+	\textcolor{black!70}{\itshape\Large Curriculum Vitae}
+\end{minipage}
+\begin{minipage}[t]{0.50\textwidth}
+	\raggedleft % Align text to the right
+	\textcolor{black!70}{\small\itshape Observatory, Cape Town, South Africa}\\[0.0cm]
+	\textcolor{black!70}{\scalebox{0.7}{\faPhone}\ \small\itshape +27 784 404 539} \\[0.2em] % Phone number
+	\textcolor{black!70}{\scalebox{0.7}{\faEnvelopeO}\ \small\itshape \href{mailto:ngmpac001@myuct.ac.za}{ngmpac001@myuct.ac.za}} \\[0.2em] % Clickable Email
+	\textcolor{black!70}{\scalebox{0.7}{\faGlobe}\ \small\itshape \href{https://www.linkedin.com/in/pacome-nguimeya/}{www.linkedin.com/in/pacome-nguimeya}} % Clickable Website
+\end{minipage}
+
+\vspace{0.8cm}
+\customheader{}{\large Research Interests}
+\vspace{0.1cm}
+
+\begin{minipage}[t]{0.203\textwidth}
+	\hspace{0.1cm}
+\end{minipage}
+\begin{minipage}[t]{0.80\textwidth}
+Computational Condensed Matter Physics: I explore unique quantum properties in topological materials, focusing on new quantum phases and fundamental insights.\vspace{0.2cm}
+
+Quantum Simulation: I am interested in utilizing quantum computers to model and investigate complex quantum phenomena, surpassing classical computational limits.\vspace{0.2cm}
+
+Quantum Machine Learning: I am interested in developing advanced models to enhance the understanding and design of quantum materials for key applications such as energy storage and electronics.
+\end{minipage}
+
+\vspace{0.2cm}
+\customheader{}{\large Academic History}
+\vspace{0.2cm}
+
+\setlength{\tabcolsep}{0.13cm}
+\begin{tabularx}{\textwidth}{ 
+		>{\color{darkblue}\bfseries\customfontsize{0.45cm}\topaligned}r 
+		>{\customfontsize{0.45cm}}X
+	}
+	06/2018 - 09/2024 & PhD candidate in Computational Condensed Matter and Materials Physics at the University of Cape Town (UCT), Cape Town, South Africa.\vspace{0.2cm}\\
+	09/2015 & Research Master Degree in Condensed Matter Physics, Department of Physics, University of Dschang, Cameroon.\vspace{0.2cm}\\
+	06/2015 & Structured Master Degree in Mathematical Sciences, African Institute for Mathematical Sciences, AIMS-Cameroon.\vspace{0.2cm}\\
+	09/2013 & Master I in Condensed Matter Physics, Department of Physics, University of Dschang, Cameroon.\vspace{0.2cm}\\
+	09/2012 & Bachelor Degree in Condensed Matter Physics, Department of Physics, University of Dschang, Cameroon.
+\end{tabularx}
+
+\vspace{0.2cm}
+\customheader{}{\large List of Publications}
+\vspace{0.2cm}
+
+\setlength{\tabcolsep}{0.13cm}
+\begin{tabularx}{\textwidth}{ 
+		>{\color{darkblue}\bfseries\customfontsize{0.45cm}\topaligned}r 
+		>{\customfontsize{0.45cm}}X
+	}
+	\hspace{2.8cm}{[2]} & A.J. Fotue, M.F.C. Fobasso, S.C. Kenfack, M. Tiotsop, J.-R.D. Djomou, C. M. Ekosso, G.-P. Nguimeya, J.E. Danga, R.M. Keumo Tsiaze, L.C. Fai. Tunable potentials and decoherence effect on polaron in nanostructures. Eur. Phys. J. Plus (2016) 131: 205. {\color{darkblue} DOI 10.1140/epjp/i2016-16205-5}.\vspace{0.2cm}\\
+	{[1]} & Kenfack SC, Nguimeya G.-P, Talla PK, Fotue AJ et al. (2016) Decoherence of Driven Coupled Harmonic Oscillator. J Nanosci Curr Res 1: 104. {\color{darkblue} doi:10.4172/JNCR.1000104}.
+\end{tabularx}
+
+\vspace{0.2cm}
+\customheader{}{\large Teaching}
+\vspace{-0.2cm}
+
+\setlength{\tabcolsep}{0.1cm}
+\begin{longtable}{@{}p{4.2cm} p{\dimexpr\textwidth-4.0cm}@{}}
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 09/2022 - 10/2023} & Teaching assistant:\\ & Head Tutor at the African Institute for Mathematical Sciences (AIMS), South Africa.\vspace{0.2cm}\\
+	
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 02/2022 - 06/2022} & Teaching assistant:\\ & Tutor at the African Institute for Mathematical Sciences (AIMS), South Africa.\vspace{0.2cm}\\
+	
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 02/2019 - 11/2019} & Teaching assistant:\\ & Physics Tutor at the University of Cape Town (UCT), South Africa.\vspace{0.2cm}\\
+	
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 02/2017 - 03/2017} & Teaching assistant:\\ & Physics Tutor at the Higher Teacher Training College (HTTC) Bambili, Cameroon.\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Quantum Mechanics (Undergraduate course)\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Advanced Quantum Mechanics (Graduate course) \vspace{0.2cm}\\
+
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 09/2016 - 06/2017} & High School Teacher:\\ & Part-time Physics Teacher at Government Bilingual High School Mbouda, Cameroon.\vspace{0.2cm}\\
+	
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 05/2016 - 06/2016} & Teaching assistant:\\ & Physics Tutor at the University of Dschang, Cameroon.\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Quantum mechanics (Graduate course).\vspace{0.2cm}\\
+	
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 02/2016 - 03/2016} & Teaching assistant:\\ & Physics Tutor at the Higher Teacher Training College (HTTC) Bambili, Cameroon.\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Quantum mechanics (Graduate course).\vspace{0.2cm}\\
+		
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm}  11/2015 - 01/2016} & Teaching assistant:\\ & Physics Tutor at the University of Dschang, Cameroon.\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Electromagnetism (Undergraduate course)\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Electrostatics (Undergraduate course)\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} General Physics (Undergraduate course) \vspace{0.2cm}\\
+		
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 05/2014 - 07/2014} & Teaching assistant:\\ & Physics Tutor at the University of Dschang, Cameroon.\\ &
+	\noindent \textcolor{darkblue}{$\boldsymbol\circ$}\ \hspace{0.05cm} Introduction to Quantum Physics (Undergraduate course)
+\end{longtable}
+
+\vspace{-0.2cm}
+\customheader{}{\large Additional Training}
+\vspace{-0.2cm}
+
+\setlength{\tabcolsep}{0.06cm}
+\begin{longtable}{@{}p{4.25cm} p{\dimexpr\textwidth-4.25cm}@{}}
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}06 - 07, 2024} & QML Challenge in PennyLane | PennyLane Quantum Machine Learning Challenge in the \href{https://womanium.org/Quantum/AI}{Womanium Global Quantum + AI Program}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}06/2024} & QHack 2023 Flashback Event | Quantum Challenge by \href{https://pennylane.ai/}{PennyLane}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}06/2024} & Introduction to PennyLane Certificate | Quantum Challenge by \href{https://pennylane.ai/}{PennyLane}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}06/2024} & IBM Quantum Challenge 2024 | Quantum Challenge by IBM Quantum, a division of IBM dedicated to advancing quantum computing technology.\vspace{0.2cm}\\
+		
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}02 - 06, 2024} & QCourse504-1 | Elementary Quantum Algorithms. Spring semester of the  \href{https://qworld.net/qclass23-24/}{QClass23/24} program by \href{https://qworld.net/}{QWorld} and the University of Latvia.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}05 - 06, 2024} & QTitanium | Topological Quantum Computing. Self-study module in the \href{https://qworld.net/qclass23-24/}{QClass23/24}  program by \href{https://qworld.net/}{QWorld}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}05 - 06, 2024} & QCobalt | Quantum Annealing. Self-study module in the \href{https://qworld.net/qclass23-24/}{QClass23/24} program by \href{https://qworld.net/}{QWorld}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}05 - 06, 2024} & QZinc | Quantum Error Correction. Self-study module in the \href{https://qworld.net/qclass23-24/}{QClass23/24} program by \href{https://qworld.net/}{QWorld}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}04/2024} & QML Challenge in PennyLane | Quantum Machine Learning Challenge in the \href{https://qworld.net/qclass23-24/}{QClass23/24} program by \href{https://qworld.net/}{QWorld}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}01 - 02, 2024} & CHPC - NITheCS Coding Summer School by the Centre for High Performance Computing (\href{https://www.chpc.ac.za/}{CHPC}), South Africa. More details on the \href{https://events.chpc.ac.za/event/120/}{CSS4 webpage}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}09/2023 - 01/2024} & QCourse551-1 | ``Quantum Software Development with Classiq'' by \href{https://qworld.net/}{QWorld} and \href{https://www.classiq.io/}{Classiq}. I was part of Project 32: Smart Post-Processing for Algorithms with Quantum Phase Estimation, in which I worked on the quantum phase estimation of the ground state energy of a particle in a double-well potential. More details on the \href{https://qworld.net/qcourse551-1/}{QCourse551-1 webpage}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}09/2023 - 01/2024} & QCourse501-1 | Elements of Quantum Computing and Programming. Autumn semester of the \href{https://qworld.net/qclass23-24/}{QClass23/24} program by \href{https://qworld.net/}{QWorld} and the University of Latvia. More details on the \href{https://qworld.net/qclass23-24/}{QClass23/24 webpage}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}10/2023} & QNickel6 | Quantum Computing and Programming by \href{https://qworld.net/qpoland/}{QPoland}. More details on the \href{https://qworld.net/qnickel6/}{QNickel6 webpage}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}09/2023} & QBronze115 | Quantum Computing and Programming by \href{https://qworld.net/qnepal/}{QNepal}. More details on the \href{https://qworld.net/qbronze115/}{QBronze115 webpage}.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}09/2023} & Quantum Computing for Natural Sciences (with IBM Quantum) by \href{https://open.hpi.de/}{openHPI} and IBM Quantum.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}08 - 09, 2022} & Practical HPC | \href{https://events.chpc.ac.za/event/111/}{2022 Winter School Online Course} by the Centre for High Performance Computing (\href{https://www.chpc.ac.za/}{CHPC}), South Africa.%\vspace{0.2cm}
+\end{longtable}
+
+\vspace{-0.2cm}
+\customheader{}{\large Leadership Roles}
+\vspace{-0.2cm}
+
+\setlength{\tabcolsep}{0.08cm}
+\begin{longtable}{@{}p{4.2cm} p{\dimexpr\textwidth-4.0cm}@{}}
+	\hspace*{0.23in}{\color{darkblue}\bfseries\customfontsize{0.45cm} 10/2013 - 09/2015} & Class Representative:\\ & Class representative for the MSc in Condensed Matter Physics at the University of Dschang, Cameroon.
+\end{longtable}
+
+\vspace{-0.2cm}
+\customheader{}{\large Softwares \& Programming}
+\vspace{-0.2cm}
+
+\setlength{\tabcolsep}{0.05cm}
+\begin{longtable}{@{}p{4.26cm} p{\dimexpr\textwidth-4.3cm}@{}}
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}DFT \& TB model} & Quantum Espresso, Wannier90, WannierTools, Quantum Lattice.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}Crystallography} & Xcrysden, FermiSurfer, Vesta, Avogadro.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}Q. Computing} & Qiskit, PennyLane, Classiq.\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}Programming} & Git, GitHub, Bash Script, Python, Google Apps Script, LaTeX (including Beamer).\vspace{0.2cm}\\
+	
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}Operating System} & Linux, Windows.%\vspace{0.2cm}
+\end{longtable}
+
+\vspace{-0.2cm}
+\customheader{}{\large Languages}
+\vspace{-0.2cm}
+
+\setlength{\tabcolsep}{0.05cm}
+\begin{longtable}{@{}p{4.26cm} p{\dimexpr\textwidth-4.3cm}@{}}
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}French} & Mother tongue\vspace{0.2cm}\\
+		
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}English} & Fluent%\vspace{0.2cm}
+\end{longtable}
+
+\vspace{-0.2cm}
+\customheader{}{\large References}
+\vspace{-0.2cm}
+
+\setlength{\tabcolsep}{0.05cm}
+\begin{longtable}{@{}p{4.26cm} p{\dimexpr\textwidth-4.3cm}@{}}
+	\makebox[4.05cm][r]{\color{darkblue}\bfseries\customfontsize{0.45cm}Contacts} & Contact details available upon request%\vspace{0.2cm}
+\end{longtable}
+
+%
+	
+\end{document}
